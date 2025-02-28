@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,21 +13,74 @@
     <link rel="stylesheet" href="src/css/output.css" />
   </head>
   <body class="text-inter">
+    <!-- Header Start -->
+    <header class="absolute left-0 top-0 z-50 flex w-full items-center">
+      <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a
+              href="#home"
+              class="block py-4 font-grechen text-2xl font-extrabold text-primary lg:text-3xl"
+              >John Doe</a
+            >
+          </div>
+          <div class="flex items-center">
+            <label
+              for="hamburger-menu"
+              class="group peer absolute right-4 block cursor-pointer lg:hidden"
+            >
+              <span
+                class="hamburger-line origin-top-left group-has-[:checked]:rotate-45 group-has-[:checked]:bg-red-600"
+              ></span>
+              <span class="hamburger-line group-has-[:checked]:scale-0"></span>
+              <span
+                class="hamburger-line origin-bottom-left group-has-[:checked]:-rotate-45 group-has-[:checked]:bg-red-600"
+              ></span>
+              <input type="checkbox" id="hamburger-menu" class="hidden" />
+            </label>
+            <nav class="nav-menu">
+              <ul class="wrapper-menu">
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About Me</a>
+                </li>
+                <li>
+                  <a href="#portofolio">Portofolio</a>
+                </li>
+                <li>
+                  <a href="#clients">Clients</a>
+                </li>
+                <li>
+                  <a href="#blog">Blog</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-24 lg:pt-32">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 md:w-1/2">
             <h1
-              class="text-primary text-base font-semibold md:text-lg lg:text-lg"
+              class="text-base font-semibold text-primary md:text-lg lg:text-lg"
             >
               Hello Everyone 🖐, I'm
-              <span class="text-dark block text-4xl font-bold lg:text-5xl"
+              <span class="block text-4xl font-bold text-dark lg:text-5xl"
                 >John Doe</span
               >
             </h1>
             <h2
-              class="text-secondary font-grechen font-medium md:text-lg lg:text-xl"
+              class="font-grechen font-medium text-secondary md:text-lg lg:text-xl"
             >
               Web Developer
             </h2>
@@ -35,14 +88,14 @@
               class="mt-4 font-medium leading-relaxed text-slate-500 md:text-lg lg:text-xl"
             >
               let's create a
-              <span class="text-primary font-grechen font-bold">beautiful</span>
+              <span class="font-grechen font-bold text-primary">beautiful</span>
               and
               <span class="font-grechen font-bold text-teal-500">modern</span>
               website with me
             </p>
             <a
               href="#contact"
-              class="bg-primary hover:bg-primary/80 mt-4 block w-max rounded-full px-6 py-2 text-white shadow-lg"
+              class="mt-4 block w-max rounded-full bg-primary px-6 py-2 text-white shadow-lg hover:bg-primary/80"
               >Contact Me</a
             >
           </div>
@@ -77,19 +130,19 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pb-32 pt-36">
+    <section id="about" class="pb-32 pt-28 lg:pt-36">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="flex flex-wrap">
           <div class="w-full px-4 md:w-1/2">
             <h4
-              class="text-primary mb-3 font-bold uppercase md:text-lg lg:text-xl"
+              class="mb-3 font-bold uppercase text-primary md:text-lg lg:text-xl"
             >
               About Me
             </h4>
-            <h2 class="text-dark mb-4 text-3xl font-bold lg:text-4xl">
+            <h2 class="mb-4 text-3xl font-bold text-dark lg:text-4xl">
               let's work together with me
             </h2>
-            <p class="text-secondary text-base md:text-lg">
+            <p class="text-base text-secondary md:text-lg">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
               veritatis officia obcaecati veniam nisi quis debitis vitae eos
               dolorem ducimus?
@@ -97,11 +150,11 @@
           </div>
           <div class="mt-10 w-full px-4 md:w-1/2">
             <h3
-              class="font-grechen text-dark mb-3 text-xl font-extrabold md:text-3xl"
+              class="mb-3 font-grechen text-xl font-extrabold text-dark md:text-3xl"
             >
               let's be friends
             </h3>
-            <p class="text-secondary text-base md:text-lg">
+            <p class="text-base text-secondary md:text-lg">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
               accusamus doloribus dicta amet, veniam veritatis?
             </p>
@@ -192,5 +245,266 @@
       </div>
     </section>
     <!-- About Section End -->
+
+    <!-- Portofolio Section Start -->
+    <section id="portofolio" class="bg-slate-100 pb-16 pt-28">
+      <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-1 text-lg font-semibold uppercase text-primary lg:text-xl"
+            >
+              Portofolio
+            </h4>
+            <h2
+              class="mb-3 text-2xl font-bold text-dark md:text-3xl lg:text-4xl"
+            >
+              Latest Projects
+            </h2>
+            <p class="text-base text-secondary lg:text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+              repudiandae fugiat dolores dicta fuga excepturi recusandae velit
+              corporis mollitia sapiente!
+            </p>
+          </div>
+
+          <div
+            class="mx-auto flex w-full max-w-screen-lg flex-wrap justify-center"
+          >
+            <div class="mb-8 p-4 md:w-1/2 lg:mb-10">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img
+                  src="src/img/landing-page.webp"
+                  alt="Landing Page"
+                  class="aspect-[6/4] w-full"
+                />
+              </div>
+              <h3
+                class="mb-3 mt-4 font-grechen text-xl font-semibold text-dark"
+              >
+                Landing Page by. John Doe
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                quo odio recusandae!
+              </p>
+            </div>
+            <div class="mb-8 p-4 md:w-1/2 lg:mb-10">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img
+                  src="src/img/technical-documentation.png"
+                  alt="Technical Documentation"
+                  class="aspect-[6/4] w-full"
+                />
+              </div>
+              <h3
+                class="mb-3 mt-4 font-grechen text-xl font-semibold text-dark"
+              >
+                Technical Documentation by. John Doe
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Tempora, cumque.
+              </p>
+            </div>
+            <div class="mb-8 p-4 md:w-1/2 lg:mb-10">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img
+                  src="src/img/e-commerce.jpeg"
+                  alt="E-Commerce"
+                  class="aspect-[6/4] w-full"
+                />
+              </div>
+              <h3
+                class="mb-3 mt-4 font-grechen text-xl font-semibold text-dark"
+              >
+                E-Commerce by. John Doe
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis porro illum voluptatum ducimus facilis?
+              </p>
+            </div>
+            <div class="mb-8 p-4 md:w-1/2 lg:mb-10">
+              <div class="overflow-hidden rounded-md shadow-md">
+                <img
+                  src="src/img/tribute-page.png"
+                  alt="Tribute Page"
+                  class="aspect-[6/4] w-full"
+                />
+              </div>
+              <h3
+                class="mb-3 mt-4 font-grechen text-xl font-semibold text-dark"
+              >
+                Tribute Page by. John Doe
+              </h3>
+              <p class="text-base font-medium text-secondary">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et aut
+                nemo vel ab.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portofolio Section End -->
+
+    <!-- Clients Section Start -->
+    <section id="clients" class="bg-slate-300 pb-16 pt-36">
+      <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-1 text-lg font-semibold uppercase text-primary lg:text-xl"
+            >
+              Clients
+            </h4>
+            <h2
+              class="mb-3 text-2xl font-bold text-white md:text-3xl lg:text-4xl"
+            >
+              That Have Worked Together
+            </h2>
+            <p class="text-base text-white lg:text-lg">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequatur provident maxime fuga officia.
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-start justify-center">
+            <a
+              href="#"
+              class="mx-4 max-w-32 bg-clip-content py-4 opacity-65 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/img/clients/amazon.svg" alt="" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-32 bg-clip-content py-4 opacity-65 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/img/clients/accuweather.svg" alt="" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-32 bg-clip-content py-4 opacity-65 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/img/clients/gojek.svg" alt="" />
+            </a>
+            <a
+              href="#"
+              class="mx-4 max-w-32 bg-clip-content py-4 opacity-65 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+            >
+              <img src="src/img/clients/fidelity.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients Section End -->
+
+    <!-- Blog Section Start -->
+    <section id="blog" class="bg-slate-800 pb-28 pt-32">
+      <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-1 text-lg font-semibold uppercase text-primary lg:text-xl"
+            >
+              Blog
+            </h4>
+            <h2
+              class="mb-3 text-2xl font-bold text-white md:text-3xl lg:text-4xl"
+            >
+              Recent Posts
+            </h2>
+            <p class="text-base text-white lg:text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, autem!
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-y-6 px-2 md:gap-y-8">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
+            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+              <a href="#" class="block">
+                <img
+                  src="src/img/posts/programming.jpg"
+                  alt="Programming Post"
+                  class="aspect-video w-full"
+                />
+              </a>
+              <div class="px-4 py-6">
+                <h3
+                  class="mb-4 max-w-max font-grechen text-xl font-bold [&:hover>a]:text-primary"
+                >
+                  <a href="#" class="block truncate">Learning Programming</a>
+                </h3>
+                <p class="mb-3 text-base text-secondary">
+                  Lorem ipsum dolor sit adipisicing elit. Porro perferendis quis
+                  illo.
+                </p>
+                <a href="#" class="text-blue-600 hover:text-primary"
+                  >Read More...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
+            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+              <a href="#" class="block">
+                <img
+                  src="src/img/posts/gaming.jpg"
+                  alt="Programming Post"
+                  class="aspect-video w-full"
+                />
+              </a>
+              <div class="px-4 py-6">
+                <h3
+                  class="mb-4 max-w-max font-grechen text-xl font-bold [&:hover>a]:text-primary"
+                >
+                  <a href="#" class="block truncate">Streaming Games</a>
+                </h3>
+                <p class="mb-3 text-base text-secondary">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Odio?
+                </p>
+                <a href="#" class="text-blue-600 hover:text-primary"
+                  >Read More...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
+            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+              <a href="#" class="block">
+                <img
+                  src="src/img/posts/business.jpg"
+                  alt="Programming Post"
+                  class="aspect-video w-full"
+                />
+              </a>
+              <div class="px-4 py-6">
+                <h3
+                  class="mb-4 max-w-max font-grechen text-xl font-bold [&:hover>a]:text-primary"
+                >
+                  <a href="#" class="block truncate">Business Plans</a>
+                </h3>
+                <p class="mb-3 text-base text-secondary">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tempora.
+                </p>
+                <a href="#" class="text-blue-600 hover:text-primary"
+                  >Read More...</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <script src="src/js/script.js"></script>
   </body>
 </html>
