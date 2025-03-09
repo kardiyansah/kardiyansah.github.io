@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html"],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -18,6 +19,7 @@ module.exports = {
         primary: "#c026d3",
         secondary: "#475569",
         dark: "#0f172a",
+        light: "#e2e8f0",
       },
       fontFamily: {
         grechen: "Grechen Fuemen",

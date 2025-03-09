@@ -10,7 +10,18 @@
       href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/css/final.css" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body class="text-inter">
     <!-- Header Start -->
@@ -38,7 +49,7 @@
               ></span>
               <input type="checkbox" id="hamburger-menu" class="hidden" />
             </label>
-            <nav class="nav-menu">
+            <nav class="nav-menu dark:[&_a]:text-white">
               <ul class="wrapper-menu">
                 <li>
                   <a href="#home">Home</a>
@@ -58,6 +69,27 @@
                 <li>
                   <a href="#contact">Contact</a>
                 </li>
+                <li class="flex items-center">
+                  <div class="mt-3 flex lg:mt-0">
+                    <span class="mr-3 text-sm dark:text-slate-100">Light</span>
+                    <label for="dark-mode" class="group">
+                      <div
+                        class="flex h-5 w-10 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="h-4 w-4 rounded-full bg-slate-50 transition-all duration-500 group-has-[:checked]:translate-x-full"
+                        ></div>
+                      </div>
+                      <input
+                        type="checkbox"
+                        name="dark-mode"
+                        id="dark-mode"
+                        class="hidden"
+                      />
+                    </label>
+                    <span class="ml-3 text-sm dark:text-slate-100">Dark</span>
+                  </div>
+                </li>
               </ul>
             </nav>
           </div>
@@ -67,7 +99,7 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-24 lg:pt-32">
+    <section id="home" class="pt-24 lg:pt-32 dark:bg-dark">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 md:w-1/2">
@@ -75,12 +107,13 @@
               class="text-base font-semibold text-primary md:text-lg lg:text-lg"
             >
               Hello Everyone 🖐, I'm
-              <span class="block text-4xl font-bold text-dark lg:text-5xl"
+              <span
+                class="dark:text-light block text-4xl font-bold text-dark lg:text-5xl"
                 >John Doe</span
               >
             </h1>
             <h2
-              class="font-grechen font-medium text-secondary md:text-lg lg:text-xl"
+              class="dark:text-light font-grechen font-medium text-secondary md:text-lg lg:text-xl"
             >
               Web Developer
             </h2>
@@ -130,7 +163,7 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pb-32 pt-28 lg:pt-36">
+    <section id="about" class="pb-32 pt-28 lg:pt-36 dark:bg-dark">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="flex flex-wrap">
           <div class="w-full px-4 md:w-1/2">
@@ -139,7 +172,9 @@
             >
               About Me
             </h4>
-            <h2 class="mb-4 text-3xl font-bold text-dark lg:text-4xl">
+            <h2
+              class="dark:text-light mb-4 text-3xl font-bold text-dark lg:text-4xl"
+            >
               let's work together with me
             </h2>
             <p class="text-base text-secondary md:text-lg">
@@ -150,7 +185,7 @@
           </div>
           <div class="mt-10 w-full px-4 md:w-1/2">
             <h3
-              class="mb-3 font-grechen text-xl font-extrabold text-dark md:text-3xl"
+              class="dark:text-light mb-3 font-grechen text-xl font-extrabold text-dark md:text-3xl"
             >
               let's be friends
             </h3>
@@ -247,7 +282,7 @@
     <!-- About Section End -->
 
     <!-- Portofolio Section Start -->
-    <section id="portofolio" class="bg-slate-100 pb-16 pt-28">
+    <section id="portofolio" class="bg-slate-100 pb-16 pt-28 dark:bg-slate-800">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
@@ -257,11 +292,11 @@
               Portofolio
             </h4>
             <h2
-              class="mb-3 text-2xl font-bold text-dark md:text-3xl lg:text-4xl"
+              class="dark:text-light mb-3 text-2xl font-bold text-dark md:text-3xl lg:text-4xl"
             >
               Latest Projects
             </h2>
-            <p class="text-base text-secondary lg:text-lg">
+            <p class="text-base text-secondary lg:text-lg dark:text-slate-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
               repudiandae fugiat dolores dicta fuga excepturi recusandae velit
               corporis mollitia sapiente!
@@ -269,7 +304,7 @@
           </div>
 
           <div
-            class="mx-auto flex w-full max-w-screen-lg flex-wrap justify-center"
+            class="dark:[&_*]:text-light mx-auto flex w-full max-w-screen-lg flex-wrap justify-center"
           >
             <div class="mb-8 p-4 md:w-1/2 lg:mb-10">
               <div class="overflow-hidden rounded-md shadow-md">
@@ -350,7 +385,7 @@
     <!-- Portofolio Section End -->
 
     <!-- Clients Section Start -->
-    <section id="clients" class="bg-slate-300 pb-16 pt-36">
+    <section id="clients" class="bg-slate-300 pb-16 pt-36 dark:bg-slate-500">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
@@ -401,7 +436,7 @@
     <!-- Clients Section End -->
 
     <!-- Blog Section Start -->
-    <section id="blog" class="bg-slate-800 pb-28 pt-32">
+    <section id="blog" class="bg-slate-800 pb-28 pt-32 dark:bg-slate-100">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
@@ -411,11 +446,11 @@
               Blog
             </h4>
             <h2
-              class="mb-3 text-2xl font-bold text-white md:text-3xl lg:text-4xl"
+              class="mb-3 text-2xl font-bold text-white md:text-3xl lg:text-4xl dark:text-dark"
             >
               Recent Posts
             </h2>
-            <p class="text-base text-white lg:text-lg">
+            <p class="text-base text-white lg:text-lg dark:text-dark">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Doloribus, autem!
             </p>
@@ -424,7 +459,9 @@
 
         <div class="flex flex-wrap gap-y-6 px-2 md:gap-y-8">
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+            <div
+              class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-dark"
+            >
               <a href="#" class="block">
                 <img
                   src="src/img/posts/programming.jpg"
@@ -434,11 +471,13 @@
               </a>
               <div class="px-4 py-6">
                 <h3
-                  class="mb-4 max-w-max font-grechen text-xl font-bold [&:hover>a]:text-primary"
+                  class="[&:hover>a]:text-primar mb-4 max-w-max font-grechen text-xl font-bold"
                 >
-                  <a href="#" class="block truncate">Learning Programming</a>
+                  <a href="#" class="dark:text-light block truncate"
+                    >Learning Programming</a
+                  >
                 </h3>
-                <p class="mb-3 text-base text-secondary">
+                <p class="dark:text-light mb-3 text-base text-secondary">
                   Lorem ipsum dolor sit adipisicing elit. Porro perferendis quis
                   illo.
                 </p>
@@ -449,7 +488,9 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+            <div
+              class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-dark"
+            >
               <a href="#" class="block">
                 <img
                   src="src/img/posts/gaming.jpg"
@@ -461,9 +502,11 @@
                 <h3
                   class="mb-4 max-w-max font-grechen text-xl font-bold [&:hover>a]:text-primary"
                 >
-                  <a href="#" class="block truncate">Streaming Games</a>
+                  <a href="#" class="dark:text-light block truncate"
+                    >Streaming Games</a
+                  >
                 </h3>
-                <p class="mb-3 text-base text-secondary">
+                <p class="dark:text-light mb-3 text-base text-secondary">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Odio?
                 </p>
@@ -474,7 +517,9 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+            <div
+              class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-dark"
+            >
               <a href="#" class="block">
                 <img
                   src="src/img/posts/business.jpg"
@@ -486,9 +531,11 @@
                 <h3
                   class="mb-4 max-w-max font-grechen text-xl font-bold [&:hover>a]:text-primary"
                 >
-                  <a href="#" class="block truncate">Business Plans</a>
+                  <a href="#" class="dark:text-light block truncate"
+                    >Business Plans</a
+                  >
                 </h3>
-                <p class="mb-3 text-base text-secondary">
+                <p class="dark:text-light mb-3 text-base text-secondary">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Tempora.
                 </p>
@@ -504,7 +551,7 @@
     <!-- Blog Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pb-28 pt-32">
+    <section id="contact" class="pb-28 pt-28 dark:bg-slate-800">
       <div class="container xl:max-w-screen-lg 2xl:max-w-screen-xl">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
@@ -513,10 +560,12 @@
             >
               Contact
             </h4>
-            <h2 class="mb-3 text-2xl font-bold md:text-3xl lg:text-4xl">
+            <h2
+              class="dark:text-light mb-3 text-2xl font-bold md:text-3xl lg:text-4xl"
+            >
               Contact Me
             </h2>
-            <p class="text-base lg:text-lg">
+            <p class="dark:text-light text-base lg:text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
               consequuntur!
             </p>
@@ -710,6 +759,15 @@
       </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Back To Top Start -->
+    <a
+      id="to-top"
+      href="#home"
+      class="fixed bottom-4 right-4 z-[999] hidden size-12 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse lg:size-14"
+      ><span class="mt-2 block size-4 rotate-45 border-l border-t"></span>
+    </a>
+    <!-- Back To Top End -->
 
     <script src="src/js/script.js"></script>
   </body>
