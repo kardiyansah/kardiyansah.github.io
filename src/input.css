@@ -17,7 +17,7 @@
   }
 
   .nav-menu {
-    @apply absolute right-4 top-full hidden w-full max-w-60 rounded-md bg-white/70 px-8 py-4 shadow-md backdrop-blur peer-has-[:checked]:block lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:backdrop-blur-none dark:bg-dark/60 dark:shadow-slate-200 dark:backdrop-blur;
+    @apply absolute right-4 top-full hidden w-full max-w-60 rounded-md bg-white/70 px-8 py-4 shadow-md backdrop-blur peer-has-[:checked]:block lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:backdrop-blur-none dark:bg-dark/60 dark:shadow-slate-200 dark:backdrop-blur dark:lg:bg-transparent dark:lg:backdrop-blur-none;
   }
 
   .wrapper-menu {
